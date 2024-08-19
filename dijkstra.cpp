@@ -1,5 +1,7 @@
 #include<iostream>
+#include<string>
 #include<map>
+#include<queue>
 using namespace std;
 
 void displayGraph(map<string, vector<pair<string,int> > > &graph)
@@ -18,12 +20,25 @@ void displayGraph(map<string, vector<pair<string,int> > > &graph)
 	}
 
 }
+class Compare{
+	public:
+	bool operator()(pair<int,string> a, pair<int,string> b)
+	{
+		return a.first > b.first;
+	}
+};
 int main()
 {
 	//unordered_map<string, vector<pair<string,int> > > graph;
 	map<string, vector<pair<string,int> > > graph;
 	pair<string, int> p;
 	int no_nodes = 0;
+
+	string sample = "6 A 2 B 5 C 2 B 2 D 4 E 2 C 2 B 8 E 7 D 2 F 3 E 6 E 1 F 1 F 0";
+	cout << "below is the sample input you can copy paste this if you don't want to enter new input below\n";
+	cout << sample;
+	cout << endl;
+
 	cout << "Enter the no of nodes you want in the graph" << endl;
 	cin >> no_nodes;
 	string source = "";
@@ -56,6 +71,32 @@ int main()
 	}
 	
 	displayGraph(graph);
+	//string source;
+	cout << "Enter the source: ";
+	cin >> source;
+	
+
+
+	// created the visited vector
+	vector<bool> visited(no_nodes, false);
+	map<string, pair<int,string> > distTable;
+	for(const auto &val:graph)
+	{
+		if(val.first == source)
+			distTable.insert({source,{0,""}});
+		else distTable.insert({val.first,{INT_MAX,""}});
+	}
+
+	priority_queue<pair<int,string>,vector<pair<int,string> >,Compare > minHeap;
+
+	minHeap.push({98,"A"});
+	minHeap.push({11,"B"});
+	auto p1 = minHeap.top();
+	cout << p1.first << " " << p1.second << endl;
+
+
+
+
 
 
 

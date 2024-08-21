@@ -78,7 +78,7 @@ int main()
 
 
 	// created the visited vector
-	vector<bool> visited(no_nodes, false);
+	unordered_map<string,bool>  visited;
 	map<string, pair<int,string> > distTable;
 	for(const auto &val:graph)
 	{
@@ -89,16 +89,39 @@ int main()
 
 	priority_queue<pair<int,string>,vector<pair<int,string> >,Compare > minHeap;
 
+	/*
 	minHeap.push({98,"A"});
 	minHeap.push({11,"B"});
 	auto p1 = minHeap.top();
 	cout << p1.first << " " << p1.second << endl;
+	*/
+	minHeap.push({0,source});
+	distTable[source] = {0,source};
 
+	while(!minHeap.empty())
+	{
+		auto p = minHeap.top();
+		minHeap.pop();
+		visited[p.second] = true;
+		for(const auto &vec:graph[p.second]){
+			if(visited.find(vec.first) == visited.end()){
+				if(distTable[vec.first].first > (distTable[p.second].first + vec.second)){
+						distTable[vec.first] = {(distTable[p.second].first + vec.second),p.second};
+				}
 
+			}
+			minHeap.push({distTable[vec.first].first,vec.first});
 
+		}
+			
 
+	}
+	cout << "Displaying the distance table " << endl;
+	cout << " the source is " << source << endl;
+	for(const auto &keyPair:distTable){
+		cout << keyPair.first << " distance: " << keyPair.second.first << " parent: " << keyPair.second.second << endl;
 
-
+	}
 
 	return 0;
 }

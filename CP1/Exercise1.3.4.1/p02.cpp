@@ -3,8 +3,8 @@ using namespace std;
 int main(){
 
 	int n;
-	cin >> n;
-	printf("%.nf",PI);
+	scanf("%d",&n);
+	printf("%.*lf\n",n,M_PI);
 	return 0;
 
 }

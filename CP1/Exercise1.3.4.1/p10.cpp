@@ -3,7 +3,7 @@ using namespace std;
 bool valid_word(string word){
 	if(word.length() != 3) return false;
 	if((word[0] < 'a') or (word[0] > 'z')) return false;
-	else if((word[1] < 'a') or (word[1] > 'z')) return false;
+	else if((word[1] < '0') or (word[1] > '9')) return false;
 	else if((word[2] < '0') or  (word[2] > '9')) return false;
 	return true;
 }

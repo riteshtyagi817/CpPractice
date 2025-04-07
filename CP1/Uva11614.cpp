@@ -11,14 +11,8 @@ int main(){
 	while(TT--){
 
 		scanf("%lld%c",&value, &dummy);
-		i = 1;
-		while(value){
-			if(value < i) break;
-			value -= i;
-			i++;
-			count++;
-
-		}
+		// tricky to think
+		count = ((int)sqrt(8*value + 1) - 1) / 2;
 		printf("%lld\n",count);
 		count = 0;
 

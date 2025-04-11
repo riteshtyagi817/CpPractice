@@ -1,4 +1,4 @@
 you need to put below aliases in the .bashrc present in the home directory
-alias newfile='echo -e "/* Date: $(date)\nUser: ritesht(Ritesh Tyagi) */\n#include<bits/stdc++.h>\nusing namespace std;\nint main()\n{\n\tios::sync_with_stdio(0)\n\tcin.tie(0);\n\treturn 0;\n}\n" >> new_file.cpp'
+alias newfile='echo -e "/* Date: $(date)\nUser: ritesht(Ritesh Tyagi) */\n#include<bits/stdc++.h>\nusing namespace std;\nint main()\n{\n\tios::sync_with_stdio(0);\n\tcin.tie(0);\n\treturn 0;\n}\n" >> new_file.cpp'
 alias uvacpp='g++ -lm -lcrypt -O2 -std=c++11 -pipe -DONLINE_JUDGE'
 alias cpp='g++ -std=c++17 -O2 -Wall'

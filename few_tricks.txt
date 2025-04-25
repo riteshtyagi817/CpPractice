@@ -1,0 +1,7 @@
+1. while(cin >> x){ // code } // this loop reads element one after another,until there is no more data available in in the input.
+2. getline(cin, in) where in is string in to read the line with spaces.
+3. to read the input from the files and dump it to the files->
+	// just place the below lines in the start 
+	freopen("input.txt", "r", stdin);
+	freopen("output.txt", "w", stdout);
+

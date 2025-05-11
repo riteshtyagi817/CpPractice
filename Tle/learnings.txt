@@ -1,0 +1,2 @@
+1. transform(in.begin(), in.end(), in.begin(),::toupper); // to change string to upper case
+2. in.erase(unique(in.begin(),in.end()),in.end()); // to erase duplicate chars from the string

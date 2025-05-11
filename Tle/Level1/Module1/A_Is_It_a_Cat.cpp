@@ -59,13 +59,27 @@ void solve(){
 
     return;
 }
+void other_method(){
+
+    int len;
+    cin >> len;
+    string in;
+    cin >> in;
+    transform(in.begin(), in.end(), in.begin(), ::toupper);
+    in.erase(unique(in.begin(),in.end()), in.end());
+    cout << (in == "MEOW"?"YES":"NO") << endl;
+    return;
+
+
+}
 int main(){
 
   ios_base::sync_with_stdio(0);
   cin.tie(nullptr);cout.tie(nullptr);
   int tt;
   cin >> tt;
-  while(tt--) solve();
+  //while(tt--) solve();
+  while(tt--) other_method();
 
 
   return 0;

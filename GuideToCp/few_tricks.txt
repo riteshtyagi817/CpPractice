@@ -4,4 +4,18 @@
 	// just place the below lines in the start 
 	freopen("input.txt", "r", stdin);
 	freopen("output.txt", "w", stdout);
-
+4. the following code defines a long long variable:
+long long x = 123456789123456789LL
+5. g++ compiler also supports __int128__t but not not available in all contest systems
+6. An important property of remainders is that the following formulas hold
+(a+b)mod m = ( a mod m + b mod m ) mod m 
+(a - b)mod m = ( a mod m - b mod m ) mod m
+(a * b) mod m = ( a mod m * b mod m) mod m
+7. An easy way to make sure that there are no negative remainders is to first calculate the remainder as usual and then add m if the result is negative:
+x = x%m
+if ( x < 0) x += m;
+8. printf("%.9f\n",x); -- can be handly when printing the required precision
+9. it is risky to compare two floating numbers with == but we can use below thing
+if(abs(a-b) < 1e-9){
+	// a and b are equal
+}

@@ -5,7 +5,7 @@ int mod = 1e9+7;
 int binPow(int a, int b){
 
 	if(b == 0) return 1;
-	if(b%2 != 1){
+	if(b%2 == 1){
 
 		return ((a%mod) *(binPow(a, b-1)%mod))%mod;
 	}

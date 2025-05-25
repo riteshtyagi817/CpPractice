@@ -19,3 +19,18 @@ if ( x < 0) x += m;
 if(abs(a-b) < 1e-9){
 	// a and b are equal
 }
+10. long long can be shortened as follows:
+typedef long long ll;
+11. some other usages of typedef
+typedef vector<int> vi;
+typedef pair<int,int> pi;
+12.some macros
+#define F first
+#define S second
+#define PB push_back
+#define MP make_pair
+#define REP(i,a,b) for(int i = a; i <= b;i++)
+
+
+
+

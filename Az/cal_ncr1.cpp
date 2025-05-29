@@ -1,3 +1,7 @@
+/*
+Approach - 1 : Instead of dividing by denominator, use concept of Inverses, along with Factorial & Binary Exponentiation
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long

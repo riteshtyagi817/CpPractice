@@ -1,3 +1,7 @@
+/*
+if n <= 1e9 , and r <= 20, previous code won't work as fact(n) would get very large
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long

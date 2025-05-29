@@ -1,3 +1,7 @@
+/*
+
+for n <= 40 and r <= n this will work as long long can store upto factorial 40
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long

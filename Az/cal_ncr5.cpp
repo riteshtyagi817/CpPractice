@@ -1,3 +1,7 @@
+/*
+
+	if multiple queris this will work
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long

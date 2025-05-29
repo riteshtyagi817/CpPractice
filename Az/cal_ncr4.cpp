@@ -1,3 +1,7 @@
+/*
+for  n   <= 1000 and if mod is not prime , then we can't calculate inverse
+and below approach will work
+*/
 #include<bits/stdc++.h>
 using namespace std;
 #define int long long

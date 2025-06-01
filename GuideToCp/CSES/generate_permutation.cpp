@@ -23,7 +23,20 @@ void generate_permutation(vector<int> perm, vector<bool> &chosen,int n){
 	return;
 
 }
+void another_method(int n){
 
+	vector<int> perm;
+	for(int i = 1; i <= n;i++){
+		perm.push_back(i);
+	}
+	do{
+		for(const auto &val:perm) cout << val << " ";
+		cout << endl;
+
+
+	}while(next_permutation(perm.begin(), perm.end()));
+
+}
 int main(){
 
 	int n;
@@ -32,6 +45,8 @@ int main(){
 	vector<bool> chosen(n+1, false);
 	vector<int> perm;
 	generate_permutation(perm, chosen,n);
+	cout << "Another Method\n";
+	another_method(n);
 
 	return 0;
 }

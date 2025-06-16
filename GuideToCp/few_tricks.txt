@@ -32,5 +32,20 @@ typedef pair<int,int> pi;
 #define REP(i,a,b) for(int i = a; i <= b;i++)
 
 12. More generally x is divisible by 2^k exactly when x&(2^k -1) is zero.
-
+13. ~(not operator) --> ~x = -x -1 or ~29 = -30
+14. x << k corresponds to multiplying x by 2^k and x >> k corresponds to dividing x by 2^k rounded down to an integer.
+15. formula x | (1 << k) sets the kth bit of x to one.
+16. formula  x & ~(1 << k) sets the kth bit of x to zero.
+17. formula x ^ ( 1 << k) inverts the kth bit of x.
+18.formula x & (x-1) sets the last one bit of x to zero 
+19.formula x & (-x) sets all the one bit to zero except for the last one bit
+20. formula x | ( x -1) inverts all the the bits after the last one bit
+21. formula a positive number x is a power of two exactly when x & (x-1) = 0
+22. one pitfall is that 1 << k is always an int bit mask , an easy way to create a long long 
+bit mask is 1LL << k
+23.g++ compiler provides following functions for counting bits
+__builtin_clz(x) -- the number of zeros a the begining of the bit wise representation
+__builtin_ctx(x) -- the number of zeroes at the end
+__builtin_popcount(x) -- the number of ones in the bit wise representation
+__builtin_parity(x) -- the parity(even or odd) of the number of ones in the bit wise representation
 
